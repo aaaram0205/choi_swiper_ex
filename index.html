@@ -11,6 +11,26 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
-    
+    <main>
+        <section class="swiper-wrapper">
+            <article class="swiper-slide">1</article>
+            <article class="swiper-slide">2</article>
+            <article class="swiper-slide">3</article>
+            <article class="swiper-slide">4</article>
+            <article class="swiper-slide">5</article>
+        </section>
+    </main>
+    <script>
+        //기본 스와이프 연결방법
+        const swipere = new Swiper("main", {
+            speed: 1000,  //스와이프시 패널이 넘어가는 속도
+            loop: true,   //스와이프 순환
+            direction: "horizontal",   //horizontal: 가로, vertical: 세로 스와이프
+            grabCursor: true,   // 커서 모양
+            slidesPerView: "auto",   //숫자: 슬라이드 갯수/ auto: 100% 또는 css 가로사이즈 특정  
+            spaceBetween: 20,   // 패널사이 간격
+            centeredSlides: true   //
+        });
+    </script>
 </body>
 </html>
