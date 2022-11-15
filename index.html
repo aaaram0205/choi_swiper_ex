@@ -11,15 +11,64 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
+    <h1>DCODELAB</h1>
     <main>
         <section class="swiper-wrapper">
-            <article class="swiper-slide">1</article>
-            <article class="swiper-slide">2</article>
-            <article class="swiper-slide">3</article>
-            <article class="swiper-slide">4</article>
-            <article class="swiper-slide">5</article>
+           <article class="swiper-slide">
+            <div class="inner">
+                <div class="con">
+                    <img src="./img/pic1.png" alt="pic1">
+                    <h2>Lorem ipsum dolor sit.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, dolores.</p>
+                </div>
+            </div>
+           </article>
+           <article class="swiper-slide">
+            <div class="inner">
+                <div class="con">
+                    <img src="./img/pic2.png" alt="pic2">
+                    <h2>Asperiores assumenda in at?</h2>
+                    <p>Incidunt veniam quaerat tenetur deserunt ducimus dolore, dolores soluta aliquid?</p>
+                </div>
+            </div>
+           </article>
+           <article class="swiper-slide">
+            <div class="inner">
+                <div class="con">
+                    <img src="./img/pic3.png" alt="pic3">
+                    <h2>Recusandae saepe distinctio asperiores!</h2>
+                    <p>A culpa cupiditate neque accusamus ut laborum deleniti delectus nulla?</p>
+                </div>
+            </div>
+           </article>
+           <article class="swiper-slide">
+            <div class="inner">
+                <div class="con">
+                    <img src="./img/pic4.png" alt="pic4">
+                    <h2>Voluptas, dolore. Quas, quo.</h2>
+                    <p>Corporis sit modi aliquid voluptate repellat nisi vitae eligendi non?</p>
+                </div>
+            </div>
+           </article>
+           <article class="swiper-slide">
+            <div class="inner">
+                <div class="con">
+                    <img src="./img/pic5.png" alt="pic5">
+                    <h2>Magni quae deserunt molestiae!</h2>
+                    <p>Reprehenderit facilis quod, culpa vel nemo ipsum maxime amet perspiciatis.</p>
+                </div>
+            </div>
+           </article>
         </section>
+        <nav class="swiper-pagination"></nav>
+
+        <nav class="swiper-button-prev navi"></nav>
+        <nav class="swiper-button-next navi"></nav>
     </main>
+
+    <footer>
+        2022 DCODELAB &copy; ALL RIGHTS RESERVED.
+    </footer>
     <script>
         //기본 스와이프 연결방법
         const swipere = new Swiper("main", {
@@ -29,7 +78,24 @@
             grabCursor: true,   // 커서 모양
             slidesPerView: "auto",   //숫자: 슬라이드 갯수/ auto: 100% 또는 css 가로사이즈 특정  
             spaceBetween: 20,   // 패널사이 간격
-            centeredSlides: true   //
+            centeredSlides: true,   // 활성화 패널 항상 가운데 배치
+            pagination: {
+                el: '.swiper-pagination',
+                //clickable: true,
+                type: "fraction"
+            },
+            navigation: {
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next'
+            },
+            effect: "coverflow",
+            coverflowEffect: {
+                rotate: 50,   //y축 회전각도
+                stretch: -100,   //당겨짐 정도
+                depth: 400,   // 입체적인 왜곡 효과정도
+                slideShadows: false,   // 패널의 그림자 설정
+            }
+
         });
     </script>
 </body>
